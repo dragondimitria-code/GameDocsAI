@@ -1,0 +1,224 @@
+[
+  {
+    "source": "GG-Bug ticket creation-280126-044243.pdf",
+    "page": 1,
+    "text": "Bug ticket creation\nProject: GG Ops (GGO) ;\nIssue Type: Bug ;\nSummary;\nComponents: leave empty;\nDescription: Pre-condition , Expected  and Actual result , Steps to\nreproduce ;\nFix versions: If the bug is related to an issue, then put this bug the same FixVersion as the main issue. Leave\nthis field empty if it is an unrelated bug;\nPriority - specify priority;\nLabels: leave empty;\nEnvironment: QA , production ;\nAttachments: video , screenshots , logs , etc;\nAffects versions: leave empty;\nAssignee: If the bug is related to an issue, then choose the same assignee as the main issue has. Otherwise\nchoose @Clapton Villanueva (Unlicensed)  as the assignee; \nPlatform: iOS , Android , Windows , etc;\nDepartment: Development  - for technical issues, LiveOps  - for game design, balance and assets\nissues;\nQA: If the bug is related to the main issue, put the same QA hero in the QA field as in main issue. In other\ncases you can leave this field empty;\nPriority Tag - specify priority tag.\nConfigurate Jira fields as follows:\n",
+    "images": [
+      "processed\\GG-Bug ticket creation-280126-044243.pdf_p1_0.png"
+    ]
+  },
+  {
+    "source": "GG-Bug ticket creation-280126-044243.pdf",
+    "page": 2,
+    "text": "Example of bug ticket:\nGGO-871: Several Logs.zip files are sent upon submitting ZenDesk ticket\nDONE\n",
+    "images": [
+      "processed\\GG-Bug ticket creation-280126-044243.pdf_p2_0.png"
+    ]
+  },
+  {
+    "source": "GG-Entering a specific profile from an iOS or Android device-280126-044743.pdf",
+    "page": 1,
+    "text": "Entering a specific profile from an iOS or Android device\n1. Go to Admin Client .\n2. Log-in to the proper Server .\n3. Install the application on iOS  or Android  devices.\n4. Launch the application on a device.\n5. Find the appropriate player profile in Admin Client  (the one from a device) and select\nit.\n6. Tap on the Change UID  button.\n",
+    "images": [
+      "processed\\GG-Entering a specific profile from an iOS or Android device-280126-044743.pdf_p1_0.png"
+    ]
+  },
+  {
+    "source": "GG-Entering a specific profile from an iOS or Android device-280126-044743.pdf",
+    "page": 2,
+    "text": "7. Select the Swap with a player  option and enter the ID of the profile you want\nto swap.\n8. Tap on the OK  button.\n9. Profile should be successfully swapped and could be now entered from the device.\n",
+    "images": [
+      "processed\\GG-Entering a specific profile from an iOS or Android device-280126-044743.pdf_p2_0.png",
+      "processed\\GG-Entering a specific profile from an iOS or Android device-280126-044743.pdf_p2_1.png"
+    ]
+  },
+  {
+    "source": "GG-How to test Bonuses-280126-044439.pdf",
+    "page": 1,
+    "text": "How to test Bonuses\nThere are a huge number of bonuses for players in the game. In fact, the game is all about receiving bonuses from\ndifferent entities of the game. Every type of bonus and penalty can be either permanent or temporary and work both\nways. Bonus affects a specific entity (e.g. a specific unit) or a whole group (e.g., bonus to defending fighters, bonus\nto trap production speed). Almost all bonuses for certain essences are summed, and only then applied to the base\nvalue. Almost nowhere is there such a thing as a bonus being applied to a value already under the effect of another\nbonus. Conventionally, bonuses can be divided into several large groups:\nBonuses of timing decrease \nResources production bonuses\nResources collection bonus\nCost reduction bonuses\nBonuses that reduce the chance of getting something\nBattle bonuses\nIt's easy to use Balance Editor values to check the bonus changes. \nBonuses of timing decrease \nThe final time duration is calculated as follows:\nТ = Т(original) * 100 / (100 +sum),\nТ is new time duration;  \nТ(original) is the original process timings from Balance Editor; \nSum is the sum of all bonuses to this speed.\nNote: \"march acceleration\" item is called acceleration, but in fact just cuts off a percentage of time. Example: the\nmarch goes to the place of 1 minute, when you apply expendable item \"march speed +50%\" march will just go 30s\ninstead of a minute, if you apply it again, then 15s, etc.\nResources production bonuses\nP = P(original)* (100+ sum)/100\nP(original) is an original number of resources that produces per hour. The number from Balance Editor; \nSum is the sum of all bonuses to this resource production. \nResources collection bonus\nThere are two options:\n1. percentage increase to the resource received, e.g, 10% more resources from the outpost;\n2. numerical increase, e,.g., +1 free key to open chests.\nThe percentage increase is calculated as follows:\n",
+    "images": []
+  },
+  {
+    "source": "GG-How to test Bonuses-280126-044439.pdf",
+    "page": 2,
+    "text": "G = G(original)* (100+sum)/100\nG(original) is an original number of resources from Balance Editor; \nSum is the sum of all bonuses to this resource collection. \nCost reduction bonuses\nP = P(original)* (100-sum)/100\nP(original) is the original entity price from Balance Editor; \nSum is the sum of all bonuses to reduce the cost for an entity.\nBonuses that reduce the chance to get something\nС = С(original) + sum\nС(original) is the original chance to get something. The number from Balance Editor;\nSum is um of all bonuses to this chance. \nIt's easy to check the chance using 0, 50, and 100%. You can get something with 100% chance when the bonus is\nactive. At 50%, you need to do several iterations to judge whether the chance is realistic or not.\nBattle bonuses\nBattle bonuses are calculated as a direct percentage of the sum of all bonuses to the original value. \n shows how the resulting parameter value is used to calculate battle characteristics.\nBattle bonuses are also written into the log on each battle.\nGame formulas\npage\nHow to test pvp-system.\n",
+    "images": []
+  },
+  {
+    "source": "GG-How to test pvp-system-280126-043817.pdf",
+    "page": 1,
+    "text": "How to test pvp-system\nSteps of testing: \n1. Choose the battle type from the sheet below; \n2. Play it on the local server; \n3. Make sure that the battle animation looks good; \n4. Check the battle result screen to make sure that it also looks good. You may find this screen\nright after the battle. \n5. Make sure that there are no crashes, disconnects, errors, and some other obvious bugs. \nBattle types\nDangerous\nBarbarian's\nbastion attack\nPlayer’s bastion\nattack\nYour bastion\ndefence\nStealing someone\nelse's treasure\nDefending your\ntreasure\nMega \nArmy from the\nchest on the\nGlobal Map\nVictory\nDefea\nt \nBattle on\nAlliance\nterritory\nBattle on\nCitadel\nterritory\nBattle outside\nAlliance or Citadel\nterritory\n",
+    "images": []
+  },
+  {
+    "source": "GG-How to test pvp-system-280126-043817.pdf",
+    "page": 2,
+    "text": "Battle bonuses testing: \n1. Open the client's log file;\n2. Play battle on the client;\n3. Find this line in log file: \"Battle: event #0\"\n4. Find lines like this: 12:36:49 :3 30123 > 1772 > unit 13 (wgd_archer_1) stats: count 9, hp 187,\nmelee attack 106, magic attack 106, melee def 101, magic def 227, speed 388, crit chance 98,\nblock chance 0, luck 157\n5. Write this parameters down;\n6. Use the bonuses;\n7. Repeat this battle again with bonuses;\n8. Refresh the client log and find the battle log again.\n9. Compare the resulting parameters with those in p.4\nCitadel Attack \nCamp Attack \nCitadel defence\nCamp defence\n",
+    "images": []
+  },
+  {
+    "source": "GG-Miscellaneous-280126-043216.pdf",
+    "page": 1,
+    "text": "Miscellaneous\nResearch: university → a long tap on the corresponding object. (1)\nAdd 100 VIP points: VIP section → tap on the specified area. (2)\nTurn VIP on/off: VIP section -> tap the “ON/OFF” cheat button. (3)\nComplete special quest: special quests section → tap on the “complete” cheat button. (1)\nReset special quests milestone progress: special quests section → tap on the “drop points”\ncheat button. (2)\nOpen next dungeon: dungeons → a long tap on the specified area. (3)\n",
+    "images": [
+      "processed\\GG-Miscellaneous-280126-043216.pdf_p1_0.png",
+      "processed\\GG-Miscellaneous-280126-043216.pdf_p1_1.png"
+    ]
+  },
+  {
+    "source": "GG-Miscellaneous-280126-043216.pdf",
+    "page": 2,
+    "text": "Destroy castle: citadel section → defense screen → a long tap on the specified area. (1)\nRepair castle: citadel section → defense screen → a long tap on the specified area. (2)\n",
+    "images": [
+      "processed\\GG-Miscellaneous-280126-043216.pdf_p2_0.png",
+      "processed\\GG-Miscellaneous-280126-043216.pdf_p2_1.png"
+    ]
+  },
+  {
+    "source": "GG-Miscellaneous-280126-043216.pdf",
+    "page": 3,
+    "text": "Disable shield: wall section → tap on the “disable shield” cheat button. (1)\nDisable disguise: wall section → tap on the “disable disguise” cheat button. (2)\nApplies to the bastions too.\n",
+    "images": [
+      "processed\\GG-Miscellaneous-280126-043216.pdf_p3_0.png",
+      "processed\\GG-Miscellaneous-280126-043216.pdf_p3_1.png"
+    ]
+  },
+  {
+    "source": "GG-Miscellaneous-280126-043216.pdf",
+    "page": 4,
+    "text": "Reach a new day: city screen → tap on the “new day” cheat button.\nSwitch between leagues: rewards list (events)→ tap on the specified arrows.\nWill change the number of VIP points and daily prize according to the balance.\nSwitches only visually just to be able to check rewards.\n",
+    "images": [
+      "processed\\GG-Miscellaneous-280126-043216.pdf_p4_0.png",
+      "processed\\GG-Miscellaneous-280126-043216.pdf_p4_1.png"
+    ]
+  },
+  {
+    "source": "GG-Miscellaneous-280126-043216.pdf",
+    "page": 5,
+    "text": "Remove additional worker/researcher/blacksmith: city screen → open corresponding panel\nsection → tap on the “off” cheat button.\nGain prize for completing edicts: quests section → tap on the “prize” cheat button.\nReset reward progression: quests section → tap on the “reset” cheat button.\nAdd new edicts: quests section → fast tap on the “generation decrees” will add 1 edict of\neach rarity, a long tap will add 200 edicts of each rarity.\n",
+    "images": [
+      "processed\\GG-Miscellaneous-280126-043216.pdf_p5_0.png",
+      "processed\\GG-Miscellaneous-280126-043216.pdf_p5_1.png"
+    ]
+  },
+  {
+    "source": "GG-Miscellaneous-280126-043216.pdf",
+    "page": 6,
+    "text": "",
+    "images": [
+      "processed\\GG-Miscellaneous-280126-043216.pdf_p6_0.png",
+      "processed\\GG-Miscellaneous-280126-043216.pdf_p6_1.png"
+    ]
+  },
+  {
+    "source": "GG-Production server profiles-280126-044018.pdf",
+    "page": 1,
+    "text": "Production server profiles\nOnly one profile could be launched at the same time. It will make the other one to be disconnected.\nProfile naming isn’t case sensitive. You can write morozru5 , it will work.\nRU_5\nValley of Heroes\nMorozRU5\nRU_7\nDomain of the Ancients\nMorozRU7\nRU_9\nStorm Realm\nMorozRU9\nUS_3\nAzure Valley\nMorozUS3\nSG_1\nDragon's Empire\nMorozSG\nEU_5\nAbode of Heroes\nMorozEU5\nEU_7\nGolden Hills\nMorozEU7\nRU_10\nLand of Swords\nMorozRU10\nEU_9\nRealm of Fire\nMorozEU9\nID\nName\nProfile\n",
+    "images": [
+      "processed\\GG-Production server profiles-280126-044018.pdf_p1_0.png",
+      "processed\\GG-Production server profiles-280126-044018.pdf_p1_1.png"
+    ]
+  },
+  {
+    "source": "GG-Production server profiles-280126-044018.pdf",
+    "page": 2,
+    "text": "",
+    "images": []
+  },
+  {
+    "source": "GG-SNS (social network service) accounts-280126-043728.pdf",
+    "page": 1,
+    "text": "SNS (social network service) accounts\n+6287850825095\nG&Gtest1234\nText Natalia Girsenok\n+6287850825095\nG&Gtest1234\nText Natalia Girsenok\n+12294419991\nG&Gtest1234\nYou may get sms via \ndeca-2fa channel\nSM\nLogin\nPassword\nSms code\nok.ru\nVK.com\nfacebook.com\n",
+    "images": []
+  },
+  {
+    "source": "GG-Statues-160226-103811.pdf",
+    "page": 1,
+    "text": "Statues\nStatues are special buildings in the city which allow players to obtain significant temporary\nbonuses.\nStatues can be built in 5 slots:\nThere are 3 types of each statue: \nThe action time of any statue can be extended with the Heavenly Marble item.\nAfter the bonus is over the statue remains in place, but it brings nothing.\nThe statue can be destructed to build a new one in its place. \nCommon\n2 h \nCommon Rune\nRare\n1 d\nRare Rune\nLagendary\n7d\nLagendary Rune\nStatue type\nAction time\nRequires\n",
+    "images": [
+      "processed\\GG-Statues-160226-103811.pdf_p1_0.png",
+      "processed\\GG-Statues-160226-103811.pdf_p1_1.png"
+    ]
+  },
+  {
+    "source": "GG-Statues-160226-103811.pdf",
+    "page": 2,
+    "text": "After the destruction of the statue, the player gets an item for the construction of the\nnext level statue. The Legendary statue give 1 The Heavenly Marble item.\nIf you have an active statue and want to build exactly the same, the first statue will be\ncanceled. \nStatue List \nCommon\nStatue of \nDungeons\nNumber of points earned in \nDungeons + 100%\nRare Statue\nof Dungeons\nNumber of points earned in \nDungeons + 100%\nReduces the waiting time of a\nnew experience chest in\nDungeons - 25%\nLegendary\nStatue of \nDungeons\nNumber of points earned in \nDungeons + 100%\nReduces the waiting time of a\nnew experience chest in\nDungeons - 50%\nCommon\nStatue of \nDefense\nIncreases wall capacity +3 \nRare Statue\nof Defense\nIncreases wall capacity +6\nLegendary\nStatue of \nDefense\nIncreases wall capacity +9 \nCommon\nStatue of \nSpeed\nMarching speed + 10%\nMarching speed in the Woods of\nWonders+ 10%\nMarching speed in water in the\nWoods of Wonders+ 10%\nPicture\nName\nDescription\nRune\n",
+    "images": [
+      "processed\\GG-Statues-160226-103811.pdf_p2_0.png",
+      "processed\\GG-Statues-160226-103811.pdf_p2_1.png",
+      "processed\\GG-Statues-160226-103811.pdf_p2_2.png",
+      "processed\\GG-Statues-160226-103811.pdf_p2_3.png",
+      "processed\\GG-Statues-160226-103811.pdf_p2_4.png",
+      "processed\\GG-Statues-160226-103811.pdf_p2_5.png",
+      "processed\\GG-Statues-160226-103811.pdf_p2_6.png",
+      "processed\\GG-Statues-160226-103811.pdf_p2_7.png",
+      "processed\\GG-Statues-160226-103811.pdf_p2_8.png",
+      "processed\\GG-Statues-160226-103811.pdf_p2_9.png"
+    ]
+  },
+  {
+    "source": "GG-Statues-160226-103811.pdf",
+    "page": 3,
+    "text": "Rare Statue\nof Speed\nMarching speed + 25%\nMarching speed in the Woods of\nWonders+ 25%\nMarching speed in water in the\nWoods of Wonders+ 25%\nLegendary\nStatue of \nSpeed\nMarching speed + 50%\nMarching speed in the Woods of\nWonders+ 50%\nMarching speed in water in the\nWoods of Wonders+ 50%\nCommon\nStatue of \nSeas\nObtains tablets in the Port +1\nReduces the ship waiting time\n-10%\nRare Statue\nof Seas\nObtains tablets in the Port +1\nReduces the ship waiting time\n-20%\nLegendary\nStatue of \nSeas\nObtains tablets in the Port +1\nReduces the ship waiting time\n-30%\nCommon\nStatue of \nEdicts\nAllows you to issue the following\nlevel I edicts instantly: Personal\nEdicts \nRare Statue\nof Edicts\nAllows you to issue the following\nlevel I, ll, lll edicts instantly:\nPersonal Edicts \nAllows you to issue the following\nlevel I edicts instantly: Alliance\nEdicts \nAllows you to issue the following\nlevel I edicts instantly: VIP\nEdicts \nAdditional Personal Edicts when\nedicts are renewed or added +1 \nLegendary\nStatue of \nAllows you to issue the following\nlevel I, ll, lll, lV edicts instantly:\n",
+    "images": [
+      "processed\\GG-Statues-160226-103811.pdf_p3_0.png",
+      "processed\\GG-Statues-160226-103811.pdf_p3_1.png",
+      "processed\\GG-Statues-160226-103811.pdf_p3_2.png",
+      "processed\\GG-Statues-160226-103811.pdf_p3_3.png",
+      "processed\\GG-Statues-160226-103811.pdf_p3_4.png",
+      "processed\\GG-Statues-160226-103811.pdf_p3_5.png",
+      "processed\\GG-Statues-160226-103811.pdf_p3_6.png",
+      "processed\\GG-Statues-160226-103811.pdf_p3_7.png",
+      "processed\\GG-Statues-160226-103811.pdf_p3_8.png",
+      "processed\\GG-Statues-160226-103811.pdf_p3_9.png"
+    ]
+  },
+  {
+    "source": "GG-Statues-160226-103811.pdf",
+    "page": 4,
+    "text": "Edicts\nPersonal Edicts \nAllows you to issue the following\nlevel I, ll edicts instantly:\nAlliance Edicts \nAllows you to issue the following\nlevel I, ll edicts instantly: VIP\nEdicts \nAdditional Personal Edicts when\nedicts are renewed or added +2\nCommon\nStatue of \nTreasures\nIncreases resource income from\ncapturing outposts +150%\nRare Statue\nof Treasures\nIncreases resource income from\ncapturing outposts +250%\nLegendary\nStatue of \nTreasures\nIncreases resource income from\ncapturing outposts +400%\nCommon\nStatue of \nRecruitment\nUnit recruitment speed + 50%\nCheaper army restoration in the\ncamp - 5%\nRare Statue\nof \nRecruitment\nUnit recruitment speed + 75%\nCheaper army restoration in the\ncamp - 10%\nLegendary\nStatue of \nRecruitment\nUnit recruitment speed + 100%\nCheaper army restoration in the\ncamp - 15%\nCommon\nStatue of \nExperience\nAmount of experience earned in\nbattle +50%\nRare Statue\nof \nExperience\nAmount of experience earned in\nbattle +100%\n",
+    "images": [
+      "processed\\GG-Statues-160226-103811.pdf_p4_0.png",
+      "processed\\GG-Statues-160226-103811.pdf_p4_1.png",
+      "processed\\GG-Statues-160226-103811.pdf_p4_2.png",
+      "processed\\GG-Statues-160226-103811.pdf_p4_3.png",
+      "processed\\GG-Statues-160226-103811.pdf_p4_4.png",
+      "processed\\GG-Statues-160226-103811.pdf_p4_5.png",
+      "processed\\GG-Statues-160226-103811.pdf_p4_6.png",
+      "processed\\GG-Statues-160226-103811.pdf_p4_7.png",
+      "processed\\GG-Statues-160226-103811.pdf_p4_8.png",
+      "processed\\GG-Statues-160226-103811.pdf_p4_9.png",
+      "processed\\GG-Statues-160226-103811.pdf_p4_10.png"
+    ]
+  },
+  {
+    "source": "GG-Statues-160226-103811.pdf",
+    "page": 5,
+    "text": "Legendary\nStatue of \nExperience\nAmount of experience earned in\nbattle +200%\nCommon\nStatue of \nHunt\nEnergy spent on battle with\nmonster -2.5%\nRare Statue\nof Hunt\nEnergy spent on battle with\nmonster -5%\nEnergy restoration speed +25%\nLegendary\nStatue of \nHunt\nEnergy spent on battle with\nmonster -10%\nEnergy restoration speed +50%\nMaximum energy +100%\nCommon\nmysterious\nrune\nThe player gets 1 any Common\nrune randomly. Exception: Hunt,\nExperience, and Recruitment\nrunes.\nRare\nmysterious\nrune\nThe player gets 1 any Rare rune\nrandomly. Exception: Hunt,\nExperience, and Recruitment\nrunes.\nLegendary\nmysterious\nrune\nThe player gets 1 any Legendary\nrune randomly. Exception: Hunt,\nExperience, and Recruitment\nrunes.\n",
+    "images": [
+      "processed\\GG-Statues-160226-103811.pdf_p5_0.png",
+      "processed\\GG-Statues-160226-103811.pdf_p5_1.png",
+      "processed\\GG-Statues-160226-103811.pdf_p5_2.png",
+      "processed\\GG-Statues-160226-103811.pdf_p5_3.png",
+      "processed\\GG-Statues-160226-103811.pdf_p5_4.png",
+      "processed\\GG-Statues-160226-103811.pdf_p5_5.png",
+      "processed\\GG-Statues-160226-103811.pdf_p5_6.png",
+      "processed\\GG-Statues-160226-103811.pdf_p5_7.png"
+    ]
+  },
+  {
+    "source": "GG-Working with a CS tickets-280126-044749.pdf",
+    "page": 1,
+    "text": "Working with a CS tickets\n1. Select the CS ticket with the highest priority from the backlog.\n2. Change ticket’s status to a Review/QA . Only one ticket could be in Review/QA  status\nby each QA member.\n3. Investigate it and make any necessary preparations.\n4. Start to test it. The procedure is as follows:\nTest the reported functionality. If the bug was reproduced, proceed with the next step.\nTest the reported functionality from the user’s profile:\n5. Report the outcome as a comment in the ticket.\n6. If the issue wasn’t detected/can’t be reproduced/hard to reproduce, leave a comment about\nit and mention @Natalia Girsenok (Deactivated)\n  If the issue was detected, change the status into the Issue detected .\nIf any additional information from the user or CS agent is required, request it by tagging\nthem in the comment of a ticket. Change the status to Needs review .\nEntering a specific profile from an iOS or Android device\nDeploying production DB into the QA server and entering user profile\n",
+    "images": []
+  },
+  {
+    "source": "GG-Working with a CS tickets-280126-044749.pdf",
+    "page": 2,
+    "text": "7. Proceed with the next tickets.\n",
+    "images": [
+      "processed\\GG-Working with a CS tickets-280126-044749.pdf_p2_0.png"
+    ]
+  }
+]
